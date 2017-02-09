@@ -1,3 +1,23 @@
 .ralphy {
 
+	(min_width:1401px) {
+
+	}
+	(min-width: 1201px) and (max-width: 1400px) {
+
+	}
+	(min-width: 1001px) and (max-width: 1200px) {
+
+	}
+	(min-width: 801px) and (max-width: 1000px) {
+
+	}
+	(min-width: 601px) and (max-width: 800px) {
+
+	}
+	(min-width:0px) and (max-width: 600px) {
+
+	}
+									
+
 }
