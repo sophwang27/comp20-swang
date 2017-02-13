@@ -1,37 +1,49 @@
 .ralphy {
 
-	(min_width: 1401px) {
+	background-image:url("ralphy.gif");
+	width: 250px;
+	height: 187px;	
+	
+
+
+	(min-width: 1401px) {
+		background-image:url("ralphy.gif") 0px 0px;
+
                 width: 250px;
-		height: 186px;
-		background:url(ralphy.gif) 0 0px;
+		height: 187px;
 	}
 	(min-width: 1201px) and (max-width: 1400px) {
+
+		background-image:url("ralphy.gif") 250px 0px; 
 		width: 250px;	
-		height: 186px;
-		background:url(ralphy.gif) 250 0px; 
+		height: 187px;
 	}
 	(min-width: 1001px) and (max-width: 1200px) {
+		background-image:url("ralphy.gif") 0px -187px;
+
 		width: 250px;
-		height: 186px;
-		background:url(ralphy.gif) 0 -187px;
+		height: 187px;
 
 	}
 	(min-width: 801px) and (max-width: 1000px) {
+		background-image:url("ralphy.gif") 250px -187px;
+
 		width: 250px;
-		height: 186px;
-		background:url(ralphy.gif) 250 -187px;
+		height: 187px;
 
 	}
 	(min-width: 601px) and (max-width: 800px) {
+		background-image:url("ralphy.gif") 0px -374px;
+
 		width: 250px;
-		height: 186px;
-		background:url(ralphy.gif) 0 -374px;
+		height: 187px;
 
 	}
 	(min-width:0px) and (max-width: 600px) {
+		background-image:url("ralphy.gif") 250px -374px;
+
 		width: 250px;
-		height: 186px;
-		background:url(ralphy.gif) 250 -374px;
+		height: 187px;
 
 	}
 									
