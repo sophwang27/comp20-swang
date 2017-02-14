@@ -1,51 +1,66 @@
-.ralphy {
 
-	background-image:url("ralphy.gif");
-	width: 250px;
-	height: 187px;	
-	
+/* top left image */
+@media only screen and (min-width: 1401px) {
+ 
+        .ralphy {      
+	        background-image:url("ralphy.gif");
+		background-position: 0px 0px;
+        	width: 250px;
+        	height: 187px;
+	}
+}
 
+/* top right image */
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
 
-	(min-width: 1401px) {
-		background-image:url("ralphy.gif") 0px 0px;
-
+       .ralphy {     	   
+                background-image:url("ralphy.gif");
+	        background-position: 250px 0px;
                 width: 250px;
-		height: 187px;
-	}
-	(min-width: 1201px) and (max-width: 1400px) {
+                height: 187px;
+        }
+}		
 
-		background-image:url("ralphy.gif") 250px 0px; 
-		width: 250px;	
-		height: 187px;
-	}
-	(min-width: 1001px) and (max-width: 1200px) {
-		background-image:url("ralphy.gif") 0px -187px;
+/* middle left image */
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
 
-		width: 250px;
-		height: 187px;
+       .ralphy {
+                background-image:url("ralphy.gif");
+                background-position: 0px -187px;
+                width: 250px;
+                height: 187px;
+        }
+}
 
-	}
-	(min-width: 801px) and (max-width: 1000px) {
-		background-image:url("ralphy.gif") 250px -187px;
+/* middle right image */
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
 
-		width: 250px;
-		height: 187px;
+       .ralphy {
+                background-image:url("ralphy.gif");
+                background-position: 250px -187px;
+                width: 250px;
+                height: 187px;
+        }
+}
 
-	}
-	(min-width: 601px) and (max-width: 800px) {
-		background-image:url("ralphy.gif") 0px -374px;
+/* bottom left image */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
 
-		width: 250px;
-		height: 187px;
+       .ralphy {
+                background-image:url("ralphy.gif");
+                background-position: 0px -374px;
+                width: 250px;
+                height: 187px;
+        }
+}
 
-	}
-	(min-width:0px) and (max-width: 600px) {
-		background-image:url("ralphy.gif") 250px -374px;
+/* bottom right image */
+@media only screen and (min-width: 0px) and (max-width: 600px) {
 
-		width: 250px;
-		height: 187px;
-
-	}
-									
-
+       .ralphy {
+                background-image:url("ralphy.gif");
+                background-position: 250px -374px;
+                width: 250px;
+                height: 187px;
+        }
 }
