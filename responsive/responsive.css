@@ -1,6 +1,6 @@
-
+/* responsive.css */
 /* top left image */
-@media only screen and (min-width: 1401px) {
+@media (min-width: 1401px) {
  
         .ralphy {      
 	        background-image:url("ralphy.gif");
@@ -11,7 +11,7 @@
 }
 
 /* top right image */
-@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
 
        .ralphy {     	   
                 background-image:url("ralphy.gif");
@@ -22,7 +22,7 @@
 }		
 
 /* middle left image */
-@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+@media (min-width: 1001px) and (max-width: 1200px) {
 
        .ralphy {
                 background-image:url("ralphy.gif");
@@ -33,7 +33,7 @@
 }
 
 /* middle right image */
-@media only screen and (min-width: 801px) and (max-width: 1000px) {
+@media (min-width: 801px) and (max-width: 1000px) {
 
        .ralphy {
                 background-image:url("ralphy.gif");
@@ -44,7 +44,7 @@
 }
 
 /* bottom left image */
-@media only screen and (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 800px) {
 
        .ralphy {
                 background-image:url("ralphy.gif");
@@ -55,7 +55,7 @@
 }
 
 /* bottom right image */
-@media only screen and (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
 
        .ralphy {
                 background-image:url("ralphy.gif");
