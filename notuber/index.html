@@ -52,9 +52,10 @@ function renderMap()
 	location = new google.maps.LatLng(lat, long);
 	map.panTo(location);
 
+	var image = "icon.png";
 	marker = new google.maps.Marker({
 		position: location,
-		title: "I'm right here!"
+		icon: image
 	});
 	marker.setMap(map);
 
