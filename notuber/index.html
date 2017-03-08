@@ -5,8 +5,8 @@
 
 <title>Notuber</title>
 
-<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-// <link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<link rel="stylesheet" href="index-style.css" />
 
 <script>
 
@@ -60,8 +60,8 @@ function renderMap()
 	marker.setMap(map);
 
 	google.maps.event.addListener(marker, "click", function() {
-		infoWindow.setContent(marker.title);
-		infoWindow.open(map, marker);
+		infowindow.setContent(this.content);
+		infowindow.open(map, this);
 	});
 }
 
