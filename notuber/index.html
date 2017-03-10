@@ -57,7 +57,7 @@ function renderMe()
 	});
 	marker1.setMap(map);
 	google.maps.event.addListener(marker1, "click", function() {
-		infoWindow.setContent("iraQrjcj");
+		infoWindow.setContent("I am iraQrjcj !");
 		infoWindow.open(map, this);
 	});	
 }
@@ -69,14 +69,6 @@ function renderOthers(user, userLat, userLng)
 		icon: image2
 	});
 	marker2.setMap(map);
-
-	//var distance = new google.maps.geometry.spherical.computeDistanceBetween(me, location) * 0.000621371;
-
-	console.log("me: "+me);
-	console.log(google.maps.geometry.spherical.computeDistanceBetween(me, location)*0.000621371);
-	//console.log(distance+" first!!!!");
-	//distance *= 0.000621371;
-	//console.log(distance);
 
 	google.maps.event.addListener(marker2, "click", function() {
 		infoWindow.setContent("User "+user+" is "+google.maps.geometry.spherical.computeDistanceBetween(me, location)*0.000621371+" miles away!");
@@ -94,9 +86,6 @@ function parseResponse(responseText)
 		user = jsonString.passengers[i].username;
 		userLat = jsonString.passengers[i].lat;
 		userLng = jsonString.passengers[i].lng;
-
-		console.log("loop number     "+i);
-
 		renderOthers(user, userLat, userLng);
 	}
 }
