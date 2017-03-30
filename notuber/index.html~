@@ -1,0 +1,83 @@
+<--! notuber -->
+<--! index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>Notuber</title>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script>
+
+
+
+	var lat = 0;     // my latitude
+	var long = 0;    // my longitude
+	var request = new XMLHttpRequest();
+	var position = new google.maps.LatLng(lat, long);
+
+	var myOptions = {
+		zoom: 15,
+		center: position,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+
+	var map;
+	var marker;
+	var infoWindow = new google.maps.infoWindow();
+
+function initMap() 
+{
+	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	getLocation();
+}
+
+function getLocation()
+{
+
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrenPosition(function(position) {
+				lat = position.coords.latitude;
+				long = position.coords.longitude;
+				renderMap();
+		});
+	} else {
+		alert("Geolocation is not supported by your web browser. Sorry!");
+	}
+}
+
+function renderMap() 
+{
+
+	location = new google.maps.LatLng(lat, long);
+	map.panTo(location);
+
+	marker = new google.maps.Marker({
+		position: location,
+		title: "I'm right here!"
+	});
+	marker.setMap(map);
+
+	google.maps.even.addListener(marker, 'click', function() {
+		infoWindow.setContent(marker.title);
+		infoWindow.open(map, marker);
+	});
+}
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+</script>
+
+</head>
+<body onload="initMap()">
+
+	<div id="map_canvas"></div>
+
+</body>
+
+
+</html>
