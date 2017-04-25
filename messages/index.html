@@ -6,62 +6,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
 
-
-  //var elems = "";
-
     $(document).ready(function(){
-      /*
-      var elems = "";
-
-      var jqxhr = $.get("https://messagehub.herokuapp.com/messages.json", function(data) {
-          $("body")
-            
-            console.log("inside jqxhr");
-
-            elems += "content: " + data.content + " username: " + data.username;
-            console.log("elems are: " + elems);
-            console.log("content is : " + data.content);
-
-      }, "json");
-
-      console.log(elems);
-
-      $( "#messages" ).html( elems );
-        
-  	
-
-   */
-
-
   
     var url = "https://messagehub.herokuapp.com/messages.json";
-    $.get( url, function( data ) {
+  
+    $.getJSON( url, function( data ) {
+   
+      console.log(data.results);
 
-      $( "#messages" ).html( data.content + " by " + data.username);
-
-      /*    it's undefined??????? */
-
-      //elems += data.content + " by " + data.username;
-      //console.log(elems);
-/*
-      $.each( data, function( index, value ) {
-
-        //elems.push( content + " by " + username);
-
-        data[index] =  
-
-        data += content + " by " + username;
-
-        console.log("stuff: " + content + " by " + username);
-
-      });
-*/
+      $( "#messages" ).html( "<p>" + data.content + " by " + data.username);
 
     });
-
   });
-
-  //$( "#messages" ).html( elems );
 
   </script>
 </head>
