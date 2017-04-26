@@ -28,7 +28,7 @@
 <h5>Location:</h5>
 <p>I found the issue within the index.js file. The vehicles list is at the top of the file at the var declarations and the hardcoded authentication information is found when Mongo Client is connected to the database.</p>
 <h5>Issue and Severity:</h5>
-<p>I believe that this is a high risk issue because with the exposed database authentication information a hacker could easily enter the databse themselves and manipulate, steal, or delete the data from the database.</p>
+<p>I believe that this is a high risk issue because with the exposed database authentication information a hacker could easily enter the database themselves and manipulate, steal, or delete the data from the database.</p>
 <h5>Resolution:</h5>
 <p>A possible solution to this issue could be to save the authentication information and data list in a variable not set in this file, therefore not leaving the information and data exposed anymore.</p>
 <img src="hardcodedvehicles.png" alt="screenshot of the hardcoded vehicles list" style="width:700px"/>
@@ -37,11 +37,11 @@
 <h4>2.) HTTP Response Header</h4>
 <h5>Issue:</h5>
 <p>A second issue found was the "Access-Control-Allow-Origin" HTTP response header is set to "*".</p>
-<p>Location:</p>
+<h5>Location:</h5>
 <p>The issue is within the index.js file where the HTTP response header is set to allow for Cross Origin References. This setting allows any domain access to this application.</p>
-<p>Issue and Severity:</p>
-<p>I believe this issue to be high risk. Because the "Access-Control-Allow-Origin" is set to basically let anything access it, data can be leaked from the applicaton. Malicious sites orhackers could potentially spam the database with bad data--leading to an overflow of the database server, thus leaving the server vulnerable.</p>
-<p>Resolution:</p>
+<h5>Issue and Severity:</h5>
+<p>I believe this issue to be high risk. Because the "Access-Control-Allow-Origin" is set to basically let anything access it, data can be leaked from the applicaton. Malicious sites or hackers could potentially spam the database with bad data--leading to an overflow of the database server, thus leaving the server vulnerable.</p>
+<h5>Resolution:</h5>
 <p>A potential solution to this is to use the full features of the CORS specifications to accurately carry out the needed security measures for the application.</p>
 <img src="corsissue.png" alt="screenshot of the faulty HTTP response header setting" style="width:700px"/>
 
@@ -61,7 +61,7 @@
 <p>For future applications the security of the data and database should be considered. In order to protect and not expose private data to the public precautions must be made by ensuring that nothing can access the database but its own script, no false data can be injected into the database, no database request injections to manipulate the data is possible, and no cross site scripting is possible. Everywhere that values are taken from a client's input must be sanitized and confirmed before accepting and storing it. Taking these precautionary steps may lead to the application taking more time to process--but it should be worth it to protect the data from being corrupted and application from being compromised.</p>
 
 <h2>References</h2>
-<p>I used the class notes and security examples provided for the class by Ming to help me find the security flaws and complete this assignment</p>
+<p>I used the class notes and security examples provided for the class by Ming to aid in finding the security flaws and complete this assignment</p>
 
 </body>
 </html>
